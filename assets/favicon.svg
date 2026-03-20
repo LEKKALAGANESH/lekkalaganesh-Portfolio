@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="#0f0f1a"/>
+  <!-- Border glow -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="13" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- L: vertical bar + horizontal foot -->
+  <rect x="10" y="16" width="5" height="30" rx="1" fill="#e4e4e7"/>
+  <rect x="10" y="42" width="16" height="5" rx="1" fill="#e4e4e7"/>
+
+  <!-- G: arc + horizontal bar -->
+  <circle cx="41" cy="32" r="13" fill="none" stroke="#e4e4e7" stroke-width="5"/>
+  <!-- Cut out top-right of G -->
+  <rect x="41" y="14" width="18" height="16" fill="#0f0f1a"/>
+  <!-- G horizontal bar -->
+  <rect x="41" y="30" width="12" height="5" rx="1" fill="#e4e4e7"/>
+
+  <!-- Accent dot -->
+  <circle cx="55" cy="48" r="3.5" fill="#00d4ff"/>
+</svg>
