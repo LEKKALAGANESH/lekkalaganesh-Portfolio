@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekkala Ganesh | AI Application Engineer & Full-Stack Architect</title>
+    <meta name="description"
+        content="Portfolio of Lekkala Ganesh — AI Application Engineer & Full-Stack Architect specializing in Generative AI, RAG Pipelines, and high-compute optimization. 9+ production apps shipped in 90 days.">
+    <meta name="author" content="Lekkala Ganesh">
+    <meta name="keywords"
+        content="AI Engineer, Full-Stack Developer, Generative AI, RAG, PyTorch, Next.js, React, Portfolio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lekkala Ganesh | AI Application Engineer & Full-Stack Architect">
+    <meta property="og:description"
+        content="Portfolio of Lekkala Ganesh — AI Application Engineer specializing in Generative AI orchestration, RAG Pipelines, and production-grade full-stack systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lekkalaganesh.vercel.app">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lekkala Ganesh | AI Application Engineer">
+    <meta name="twitter:description"
+        content="AI Application Engineer & Full-Stack Architect. 9+ production apps in 90 days. Generative AI specialist.">
+
+    <!-- JSON-LD Person Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lekkala Ganesh",
+        "url": "https://lekkalaganesh.vercel.app",
+        "email": "lekkalaganesh14@gmail.com",
+        "jobTitle": "AI Application Engineer & Full-Stack Architect",
+        "sameAs": [
+            "https://github.com/LEKKALAGANESH",
+            "https://linkedin.com/in/lekkala-ganesh"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Parul University"
+        },
+        "knowsAbout": ["Artificial Intelligence", "Full-Stack Development", "Generative AI", "RAG Pipelines", "PyTorch", "React", "Next.js"]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- ========== NAVIGATION ========== -->
+    <header id="navbar" class="navbar">
+        <nav class="nav-container">
+            <a href="#hero" class="nav-logo">LG<span class="accent">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Full-page particle background -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Lekkala Ganesh</h1>
+                <p class="hero-title">
+                    <span id="typewriter" class="typewriter-text"></span>
+                    <span class="typewriter-cursor">|</span>
+                </p>
+                <p class="hero-summary">Shipping production-ready AI applications at startup speed. 9+ apps in 90 days.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="assets/resume/2026_Resume_INDIA.pdf" class="btn btn-secondary" target="_blank"
+                        rel="noopener noreferrer" download="Lekkala_Ganesh_Resume.pdf">Download Resume</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/LEKKALAGANESH" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub Profile">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/lekkala-ganesh" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn Profile">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:lekkalaganesh14@gmail.com" aria-label="Send Email">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path
+                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text animate-on-scroll">
+                        <p>I'm a <strong>high-velocity AI Application Engineer & Full-Stack Architect</strong> with a
+                            proven track record of shipping 9+ production-ready applications within 3 months. I
+                            specialize in Generative AI orchestration including RAG pipelines, Diffusion Models, and
+                            high-compute VRAM optimization.</p>
+                        <p>My expertise spans from low-level GPU optimization&mdash;reducing operational costs by
+                            <strong>75%</strong>&mdash;to building complete, accessible, and scalable web platforms. I
+                            leverage Agentic AI workflows to accelerate development cycles by <strong>3x</strong> while
+                            maintaining zero-defect production standards.</p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-number">9+</span>
+                                <span class="highlight-label">Apps in 90 Days</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">75%</span>
+                                <span class="highlight-label">GPU Cost Reduction</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">3x</span>
+                                <span class="highlight-label">Dev Cycle Acceleration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual animate-on-scroll">
+                        <div class="profile-img-wrapper">
+                            <img src="assets/ganesh.jpeg" alt="Lekkala Ganesh" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SKILLS ========== -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Technical Core</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass animate-on-scroll" data-delay="0">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">AI Orchestration & LLMOps</h3>
+                        <div class="skill-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">HuggingFace</span>
+                            <span class="tag">RAG Pipelines</span>
+                            <span class="tag">4-bit Quantization</span>
+                            <span class="tag">CUDA</span>
+                            <span class="tag">Multi-agent Workflows</span>
+                            <span class="tag">Pinecone</span>
+                            <span class="tag">ChromaDB</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass animate-on-scroll" data-delay="1">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Platform & Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Distributed Systems</span>
+                            <span class="tag">System Design</span>
+                            <span class="tag">Microservices</span>
+                            <span class="tag">REST/WebSocket</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">MongoDB Atlas</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass animate-on-scroll" data-delay="2">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Product Delivery</h3>
+                        <div class="skill-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Framer Motion</span>
+                            <span class="tag">Three.js</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass animate-on-scroll" data-delay="3">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Cloud & DevOps (GitOps)</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Vercel</span>
+                            <span class="tag">Prometheus</span>
+                            <span class="tag">Grafana</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass animate-on-scroll" data-delay="4">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M9 12l2 2 4-4" />
+                                <circle cx="12" cy="12" r="10" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">Quality & Compliance</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Vitest</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">WCAG 2.1 AA</span>
+                            <span class="tag">SEO (JSON-LD)</span>
+                            <span class="tag">HIPAA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EXPERIENCE ========== -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-marker current">
+                            <span class="pulse-dot"></span>
+                        </div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Jr. Software Developer (Full-Stack Lead)</h3>
+                                    <p class="timeline-company">AlterSquare</p>
+                                </div>
+                                <span class="timeline-date">Dec 2025 &mdash; Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li><strong>Founding Engineer Ownership:</strong> Owned the end-to-end SDLC for 9
+                                    client-facing web applications; delivered all projects from requirement gathering to
+                                    production within initial 90 days with zero critical bugs.</li>
+                                <li><strong>AI System Integration:</strong> Engineered a multi-provider AI fallback
+                                    system (GPT-4o, Gemini, OpenRouter) to ensure 99.9% uptime for mission-critical
+                                    apps, including real-time SSE voice streaming and 3D shadow simulations.</li>
+                                <li><strong>Security & Scalability:</strong> Architected high-security backends using
+                                    Row-Level Security (RLS) and JWT authentication on Supabase/PostgreSQL for financial
+                                    and contractor platforms.</li>
+                                <li><strong>Accessibility Excellence:</strong> Achieved 100% WCAG 2.1 AA compliance
+                                    across all products using custom a11y hooks and automated Playwright testing.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">React</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">GPT-4o</span>
+                                <span class="tag">Gemini</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Web Developer Intern</h3>
+                                    <p class="timeline-company">Dash Technologies Inc.</p>
+                                </div>
+                                <span class="timeline-date">Jan 2025 &mdash; Jul 2025</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li><strong>Healthcare UI Delivery:</strong> Built 12+ modular, responsive React
+                                    components for a patient-facing portal, reducing accessibility audit findings by 40%
+                                    through semantic HTML and HIPAA-aligned data handling.</li>
+                                <li><strong>Cross-Browser Engineering:</strong> Ensured 100% visual parity across
+                                    Chrome, Firefox, Safari, and Edge for complex modules like appointment scheduling
+                                    and patient history.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">HIPAA</span>
+                                <span class="tag">Semantic HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROJECTS ========== -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Projects</h2>
+
+                <!-- Featured Projects -->
+                <div class="featured-projects">
+                    <div class="project-card featured glass animate-on-scroll">
+                        <div class="project-header">
+                            <svg class="project-icon" viewBox="0 0 24 24" width="28" height="28" fill="none"
+                                stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M12 17v4M8 21h8" />
+                                <path d="M7 8h2M7 11h4" />
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/LEKKALAGANESH/Image-Video-Generation" target="_blank"
+                                    rel="noopener noreferrer" aria-label="AuraGen GitHub">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AuraGen</h3>
+                        <p class="project-subtitle">High-Compute AI Image & Video Generation Platform</p>
+                        <p class="project-desc">Engineered a specialized 4GB VRAM optimization stack (NF4 quantization,
+                            attention slicing, VAE tiling) enabling text-to-video on consumer GPUs. Real-time job queue
+                            with WebSocket progress streaming and hybrid cloud burst routing.</p>
+                        <div class="project-metric">
+                            <span class="metric-value">12.8GB &rarr; 3.2GB VRAM</span>
+                            <span class="metric-label">75% reduction</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">HF Diffusers</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">CUDA</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card featured glass animate-on-scroll">
+                        <div class="project-header">
+                            <svg class="project-icon" viewBox="0 0 24 24" width="28" height="28" fill="none"
+                                stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://tripvault.ai" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Trip Vault Live Site">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Trip Vault</h3>
+                        <p class="project-subtitle">Agentic AI Travel Assistant</p>
+                        <p class="project-desc">GPT-4o powered agentic system capable of executing 25+ sequential tool
+                            calls for itinerary planning, real-time API data retrieval, and automated proposal
+                            generation.</p>
+                        <div class="project-metric">
+                            <span class="metric-value">25+ Sequential AI Tool Calls</span>
+                            <span class="metric-label">Agentic workflow</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">GPT-4o</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Playwright</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card featured glass animate-on-scroll">
+                        <div class="project-header">
+                            <svg class="project-icon" viewBox="0 0 24 24" width="28" height="28" fill="none"
+                                stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/LEKKALAGANESH/SymptomCheckerAI" target="_blank"
+                                    rel="noopener noreferrer" aria-label="SymptomChecker AI GitHub">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">SymptomChecker AI</h3>
+                        <p class="project-subtitle">ML-Powered Diagnostic Engine</p>
+                        <p class="project-desc">Scikit-learn prediction engine achieving 95%+ accuracy across 40+
+                            medical conditions, integrated with location-based hospital recommendation APIs.</p>
+                        <div class="project-metric">
+                            <span class="metric-value">95%+ Accuracy</span>
+                            <span class="metric-label">40+ conditions</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">React</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Projects -->
+                <h3 class="subsection-title animate-on-scroll">Other Projects</h3>
+                <div class="other-projects-grid">
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">2A Construction LLC</h4>
+                        <p class="project-desc-sm">Full-stack contractor platform with secure financial data handling
+                            and RLS-protected backends.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">RLS</span>
+                        </div>
+                        <a href="https://2-a-construction-llc.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="project-link-sm">View Project &rarr;</a>
+                    </div>
+
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">Zermit AI</h4>
+                        <p class="project-desc-sm">AI-powered business automation platform with intelligent workflow
+                            orchestration.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <a href="https://github.com/LEKKALAGANESH" target="_blank" rel="noopener noreferrer"
+                            class="project-link-sm">View Project &rarr;</a>
+                    </div>
+
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">AI Stock Analyzer</h4>
+                        <p class="project-desc-sm">Real-time stock analysis with AI-driven insights and predictive
+                            modeling.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                        <a href="https://github.com/LEKKALAGANESH/AI-Stock-Portfolio-Analyzer" target="_blank"
+                            rel="noopener noreferrer" class="project-link-sm">View Project &rarr;</a>
+                    </div>
+
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">LinkedIn Post Generator</h4>
+                        <p class="project-desc-sm">AI content generation tool for crafting professional LinkedIn posts
+                            with tone control.</p>
+                        <div class="project-tags">
+                            <span class="tag">GPT-4o</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                        <a href="https://github.com/LEKKALAGANESH/LinkedIn_Post_Generator" target="_blank"
+                            rel="noopener noreferrer" class="project-link-sm">View Project &rarr;</a>
+                    </div>
+
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">VoxAI</h4>
+                        <p class="project-desc-sm">Real-time SSE voice streaming assistant with multi-provider AI
+                            fallback system.</p>
+                        <div class="project-tags">
+                            <span class="tag">SSE</span>
+                            <span class="tag">Voice AI</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <a href="https://github.com/LEKKALAGANESH/VoxAI" target="_blank" rel="noopener noreferrer"
+                            class="project-link-sm">View Project &rarr;</a>
+                    </div>
+
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">SunScope Pro</h4>
+                        <p class="project-desc-sm">3D shadow simulation tool for sunlight and comfort analysis with
+                            real-time rendering.</p>
+                        <div class="project-tags">
+                            <span class="tag">Three.js</span>
+                            <span class="tag">3D</span>
+                            <span class="tag">Simulation</span>
+                        </div>
+                        <a href="https://sun-scope-pro-sunlight-comfort-anal.vercel.app/" target="_blank"
+                            rel="noopener noreferrer" class="project-link-sm">View Project &rarr;</a>
+                    </div>
+
+                    <div class="project-card small glass animate-on-scroll">
+                        <h4 class="project-title-sm">Finance Tracker</h4>
+                        <p class="project-desc-sm">Secure personal finance platform with JWT auth and RLS-protected
+                            PostgreSQL backend.</p>
+                        <div class="project-tags">
+                            <span class="tag">Supabase</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <a href="https://github.com/LEKKALAGANESH/Finance-Tracker" target="_blank"
+                            rel="noopener noreferrer" class="project-link-sm">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EDUCATION ========== -->
+        <section id="education" class="section education">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Education</h2>
+                <div class="education-card glass animate-on-scroll">
+                    <div class="education-icon">
+                        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" />
+                        </svg>
+                    </div>
+                    <div class="education-details">
+                        <h3>Bachelor of Technology in Computer Science & Engineering</h3>
+                        <p class="education-school">Parul University, Vadodara, Gujarat</p>
+                        <div class="education-meta">
+                            <span class="education-gpa">GPA: 7.53 / 10</span>
+                            <span class="education-year">Jul 2022 &mdash; Jun 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Let's Build Something Together</h2>
+                <p class="contact-subtitle animate-on-scroll">I'm always open to discussing new projects, creative
+                    ideas, or opportunities to be part of your vision.</p>
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <a href="mailto:lekkalaganesh14@gmail.com" class="contact-email-link">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            lekkalaganesh14@gmail.com
+                        </a>
+                        <div class="contact-socials">
+                            <a href="https://github.com/LEKKALAGANESH" target="_blank" rel="noopener noreferrer"
+                                class="contact-social-link">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/lekkala-ganesh" target="_blank" rel="noopener noreferrer"
+                                class="contact-social-link">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form glass animate-on-scroll" action="https://formspree.io/f/xreydbva"
+                        method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Lekkala Ganesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script src="js/particles.js" defer></script>
+    <script src="js/typewriter.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
