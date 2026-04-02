@@ -20,14 +20,14 @@ A modern, dark-themed developer portfolio built with vanilla HTML, CSS, and Java
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Markup | HTML5 (semantic) |
-| Styling | CSS3 (custom properties, grid, flexbox, backdrop-filter) |
-| Interactivity | Vanilla JavaScript (ES6+) |
-| Fonts | Inter, JetBrains Mono (Google Fonts) |
-| Form Backend | Formspree |
-| Deployment | Vercel / GitHub Pages |
+| Layer         | Technology                                               |
+| ------------- | -------------------------------------------------------- |
+| Markup        | HTML5 (semantic)                                         |
+| Styling       | CSS3 (custom properties, grid, flexbox, backdrop-filter) |
+| Interactivity | Vanilla JavaScript (ES6+)                                |
+| Fonts         | Inter, JetBrains Mono (Google Fonts)                     |
+| Form Backend  | Formspree                                                |
+| Deployment    | Vercel / GitHub Pages                                    |
 
 ## Project Structure
 
@@ -45,7 +45,7 @@ portfolio/
 ├── assets/
 │   ├── ganesh.jpeg             # Profile photo
 │   └── resume/
-│       └── 2026_Resume_INDIA.pdf
+│       └── 2026_Resume.pdf
 ├── robots.txt
 ├── sitemap.xml
 ├── LICENSE
@@ -99,12 +99,12 @@ vercel --prod
 
 ## Performance
 
-| Metric | Target |
-|--------|--------|
-| Total size | < 300KB |
-| Lighthouse Performance | 95+ |
-| First Contentful Paint | < 1s |
-| No JS frameworks | 0KB bundle overhead |
+| Metric                 | Target              |
+| ---------------------- | ------------------- |
+| Total size             | < 300KB             |
+| Lighthouse Performance | 95+                 |
+| First Contentful Paint | < 1s                |
+| No JS frameworks       | 0KB bundle overhead |
 
 ## Customization
 
@@ -112,11 +112,11 @@ All design tokens are in CSS custom properties at the top of `css/style.css`:
 
 ```css
 :root {
-    --bg-primary: #0a0a0f;
-    --accent-cyan: #00d4ff;
-    --accent-purple: #7c3aed;
-    --container-max: 1200px;
-    /* ... */
+  --bg-primary: #0a0a0f;
+  --accent-cyan: #00d4ff;
+  --accent-purple: #7c3aed;
+  --container-max: 1200px;
+  /* ... */
 }
 ```
 
