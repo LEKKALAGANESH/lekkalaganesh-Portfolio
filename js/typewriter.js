@@ -4,9 +4,9 @@
     if (!el) return;
 
     const roles = [
-        'AI Application Engineer',
-        'Full-Stack Architect',
-        'Generative AI Specialist'
+        'Full-Stack Web Developer',
+        'AI Application Developer',
+        'Accessible Web Engineer'
     ];
 
     let roleIndex = 0;

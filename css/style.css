@@ -367,11 +367,21 @@ main,
 
 .hero-summary {
     font-size: 1rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-bottom: 32px;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-context {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
 }
 
 .hero-ctas {
@@ -419,12 +429,16 @@ main,
 
 .about-highlights {
     display: flex;
-    gap: 32px;
+    gap: 24px;
     margin-top: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .highlight-item {
     text-align: center;
+    flex: 1 1 120px;
+    min-width: 120px;
 }
 
 .highlight-number {
