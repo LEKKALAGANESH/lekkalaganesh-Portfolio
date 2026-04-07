@@ -56,7 +56,7 @@ portfolio/
 
 1. **Navigation** — Fixed header with blur-on-scroll, mobile hamburger menu
 2. **Hero** — Animated particles, typewriter roles, CTA buttons, social links
-3. **About** — Professional summary, key metrics (9+ apps, 75% GPU reduction, 3x acceleration)
+3. **About** — Professional summary, key metrics (9 apps, 75% VRAM reduction, 40% fewer accessibility findings, 95%+ ML accuracy)
 4. **Skills** — 5 glass-morphism cards: AI/LLMOps, Platform, Product Delivery, Cloud/DevOps, Quality
 5. **Experience** — Vertical timeline with gradient line and pulse indicator for current role
 6. **Projects** — 3 featured cards + 7 smaller project cards with live/GitHub links
