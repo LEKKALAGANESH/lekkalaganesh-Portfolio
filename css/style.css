@@ -267,6 +267,23 @@ main,
     width: 100%;
 }
 
+.nav-resume {
+    padding: 6px 14px;
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    border-radius: 999px;
+    color: var(--accent-cyan);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-resume:hover {
+    background: rgba(0, 212, 255, 0.08);
+    border-color: var(--accent-cyan);
+}
+
+.nav-resume::after {
+    display: none;
+}
+
 /* Hamburger */
 .hamburger {
     display: none;
@@ -604,9 +621,27 @@ main,
     white-space: nowrap;
 }
 
+.timeline-subgroup {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--accent-cyan);
+    margin: 6px 0 8px;
+}
+
+.timeline-subgroup:first-of-type {
+    margin-top: 0;
+}
+
 .timeline-bullets {
     list-style: none;
     margin-bottom: 16px;
+}
+
+.timeline-bullets + .timeline-subgroup {
+    margin-top: 4px;
 }
 
 .timeline-bullets li {

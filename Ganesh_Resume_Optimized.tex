@@ -1,0 +1,162 @@
+%-------------------------
+% Resume - Lekkala Ganesh
+% Optimized 1-Page Full-Stack Developer Resume
+% Compatible with Jake's Resume / Deedy templates
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.85in}
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{minipage}[c]{0.82\textwidth}
+    \centering
+    \textbf{\Huge \scshape Lekkala Ganesh} \\ \vspace{1pt}
+    \small Bangalore, India $|$ +91-8688479455 $|$
+    \href{mailto:lekkalaganesh14@gmail.com}{\underline{lekkalaganesh14@gmail.com}} $|$
+    \href{https://linkedin.com/in/lekkala-ganesh}{\underline{LinkedIn}} $|$
+    \href{https://github.com/LEKKALAGANESH}{\underline{GitHub}} $|$
+    \href{https://lekkalaganesh.vercel.app}{\underline{Portfolio}}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.15\textwidth}
+    \raggedleft
+    \includegraphics[width=\linewidth,keepaspectratio]{ganesh.jpeg}
+\end{minipage}
+
+\vspace{-10pt}
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Full-stack developer with \textbf{3 professional roles} across AI-powered products, healthcare UI, and scalable web platforms. Skilled in \textbf{LLM orchestration}, multi-provider fallback, \textbf{VRAM optimization}, and building accessible (\textbf{WCAG 2.1 AA}), secure (\textbf{RLS, JWT}) products with React, Next.js, and FastAPI. Seeking software engineering roles in Bangalore.
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL CORE-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{AI \& ML}{: PyTorch, Hugging Face (Diffusers, Transformers), 4-bit Quantization (bitsandbytes), CUDA, Scikit-learn, LLM API Integration (GPT-4o, Gemini), Model Fallback Architectures} \\
+     \textbf{Backend \& Data}{: REST/WebSocket APIs, FastAPI, Node.js, PostgreSQL (Row-Level Security), Supabase, MongoDB Atlas} \\
+     \textbf{Frontend}{: React, Next.js (SSR/SSG), TypeScript, Tailwind CSS, Framer Motion, Three.js} \\
+     \textbf{DevOps \& Tools}{: Docker, GitHub Actions (CI/CD), Linux Shell Scripting, Vercel, Git} \\
+     \textbf{Testing \& Accessibility}{: Vitest, Playwright (E2E), WCAG 2.1 AA, SEO (JSON-LD)}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Freelance Full-Stack Developer}{Remote}
+      {Self-Employed}{Jan 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{End-to-End Ownership:} Owned the full SDLC for \textbf{multiple client-facing web apps}, shipping each from requirements to production with \textbf{rapid turnaround and zero critical bugs}.}
+        \resumeItem{\textbf{AI System Integration:} Engineered a \textbf{multi-provider AI fallback} (GPT-4o, Gemini, OpenRouter) with graceful degradation, powering real-time SSE voice streaming (\href{https://premium-ai-voice-assistant.vercel.app/}{\underline{VoxAI}}) and 3D shadow simulations (\href{https://sun-scope-pro-sunlight-comfort-anal.vercel.app/}{\underline{SunScope Pro}}).}
+        \resumeItem{\textbf{Healthcare UI \& Secure Backends:} Built \textbf{12+ modular React components} for a patient-facing portal (\textbf{40\%} fewer accessibility findings, HIPAA-aligned), with \textbf{RLS + JWT} secured backends on Supabase/PostgreSQL for \href{https://finance-tracker-pi-rust.vercel.app/}{\underline{Finance Tracker}} and \href{https://2-a-construction-llc.vercel.app/}{\underline{2A Construction}}.}
+        \resumeItem{\textbf{Accessibility \& Cross-Browser:} Achieved \textbf{WCAG 2.1 AA} via custom a11y hooks and automated Playwright testing; delivered \textbf{100\% visual parity} across Chrome, Firefox, Safari, and Edge.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Web Development Intern}{Remote, Part-time}
+      {Slash Mark IT Solutions}{Dec 2024 -- Apr 2025}
+      \resumeItemListStart
+        \resumeItem{Delivered \textbf{6 full-stack projects} across 3 tiers: real-time Weather Forecast, URL Shortener API (Node.js/Express/MongoDB), and a Food Delivery platform with auth, geolocation, and payment flow.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Machine Learning Intern}{Virtual}
+      {Bharat Intern}{Oct 2023 -- Nov 2023}
+      \resumeItemListStart
+        \resumeItem{Built regression/classification models (House Price, Wine Quality, Iris) with \textbf{Scikit-learn} and Pandas, applying feature engineering, cross-validation, and hyperparameter tuning.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Key Technical Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AuraGen -- AI Image \& Video Generation Platform} $|$ \emph{PyTorch, HF Diffusers, FastAPI, Next.js, CUDA}}{\href{https://github.com/LEKKALAGANESH/Image-Video-Generation}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{VRAM Optimization:} Engineered a \textbf{4GB VRAM} stack (NF4 quantization, attention slicing, VAE tiling) cutting model memory from \textbf{12.8GB to 3.2GB}, enabling text-to-video (Wan 2.1) on consumer GPUs.}
+            \resumeItem{\textbf{System Orchestration:} Designed a real-time job queue with WebSocket progress streaming and \textbf{hybrid cloud burst routing} (HuggingFace Inference fallback) for peak loads.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{GoVault -- AI-Powered Travel Organizer} $|$ \emph{Next.js, TypeScript, Supabase, GPT-4o, Playwright}}{\href{https://github.com/LEKKALAGANESH/GoVault}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{AI-Powered Import:} Built a \textbf{GPT-4o} integration extracting structured booking data from emails/receipts, with \textbf{offline-first} architecture (IndexedDB + background sync).}
+            \resumeItem{\textbf{Full Travel Suite:} Implemented itinerary builder, multi-currency expense tracking, traveler profiles, and collaborative trip sharing with privacy controls.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{SymptomChecker AI -- ML-Powered Health Assistant} $|$ \emph{Flask, Scikit-learn, React, MongoDB, JWT}}{\href{https://github.com/LEKKALAGANESH/SymptomCheckerAI}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{Model Accuracy:} Built a Scikit-learn prediction engine achieving \textbf{95\%+ accuracy across 40+ medical conditions}, integrated with location-based hospital recommendation APIs.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Parul University}{Vadodara, Gujarat}
+      {Bachelor of Technology in Computer Science \& Engineering; GPA: 7.53/10}{Jul 2022 -- Jun 2025}
+  \resumeSubHeadingListEnd
+
+\end{document}
