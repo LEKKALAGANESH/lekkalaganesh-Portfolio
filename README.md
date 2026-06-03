@@ -45,7 +45,7 @@ portfolio/
 ├── assets/
 │   ├── ganesh.jpeg             # Profile photo
 │   └── resume/
-│       └── 2026_Resume.pdf
+│       └── Lekkala_Ganesh_Resume.pdf
 ├── robots.txt
 ├── sitemap.xml
 ├── LICENSE
@@ -57,7 +57,7 @@ portfolio/
 1. **Navigation** — Fixed header with blur-on-scroll, mobile hamburger menu
 2. **Hero** — Animated particles, typewriter roles, CTA buttons, social links
 3. **About** — Professional summary, key metrics (multiple apps, 75% VRAM reduction, 40% fewer accessibility findings, 95%+ ML accuracy)
-4. **Skills** — 5 glass-morphism cards: AI/LLMOps, Platform, Product Delivery, Cloud/DevOps, Quality
+4. **Skills** — 6 glass-morphism cards: AI/LLMOps, Platform, Product Delivery, Cloud/DevOps, Quality, Enterprise/JVM Stack
 5. **Experience** — Vertical timeline with gradient line and pulse indicator for current role
 6. **Projects** — 3 featured cards + 7 smaller project cards with live/GitHub links
 7. **Education** — B.Tech CSE from Parul University
