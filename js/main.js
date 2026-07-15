@@ -9,44 +9,34 @@ const sections = document.querySelectorAll('.section');
 let lastScroll = 0;
 
 function handleNavScroll() {
-    const scrollY = window.scrollY;
-    if (scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    lastScroll = scrollY;
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    lastScroll = window.scrollY;
 }
 
 window.addEventListener('scroll', handleNavScroll, { passive: true });
 
 // ========== MOBILE MENU ==========
-hamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    hamburger.classList.toggle('active');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-});
+// Guarded: a throw here would abort the rest of this file, and the scroll-reveal
+// observer below is what makes the page's content visible.
+function setMenu(open) {
+    navLinks.classList.toggle('open', open);
+    hamburger.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    // Locking the page scroll hands the only scroll path to the panel itself,
+    // which is why .nav-links carries overflow-y: auto.
+    document.body.style.overflow = open ? 'hidden' : '';
+}
 
-// Close menu on link click
-navLinkEls.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+
+    navLinkEls.forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) setMenu(false);
     });
-});
-
-// Close menu on Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    }
-});
+}
 
 // ========== ACTIVE NAV LINK ON SCROLL ==========
 const sectionObserver = new IntersectionObserver(
@@ -69,24 +59,45 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach(section => sectionObserver.observe(section));
 
 // ========== SCROLL ANIMATIONS (Intersection Observer) ==========
+// The pre-reveal state is CSS-gated on `html.js`, so if anything below fails to
+// run, the safe move is to drop that class — content returns to visible rather
+// than staying at opacity 0 forever.
 const animateElements = document.querySelectorAll('.animate-on-scroll');
 
-const animationObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                animationObserver.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    }
-);
+function revealAll() {
+    document.documentElement.classList.remove('js');
+}
 
-animateElements.forEach(el => animationObserver.observe(el));
+if (!('IntersectionObserver' in window)) {
+    revealAll();
+} else {
+    const animationObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    animationObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        }
+    );
+
+    animateElements.forEach(el => animationObserver.observe(el));
+}
+
+// Last resort: if any element is still unrevealed well after load, show it.
+// A reveal animation is an enhancement; the content is the product.
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const stuck = [...animateElements].filter(el => !el.classList.contains('visible'));
+        const allOffscreen = stuck.every(el => el.getBoundingClientRect().top > window.innerHeight);
+        if (stuck.length && !allOffscreen) revealAll();
+    }, 3000);
+});
 
 // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

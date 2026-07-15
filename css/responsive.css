@@ -764,15 +764,36 @@
         right: -100%;
         width: 280px;
         height: 100vh;
+        /* dvh tracks collapsing mobile browser chrome; vh above is the fallback */
+        height: 100dvh;
         background: rgba(10, 10, 15, 0.97);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        justify-content: center;
+        /* Auto margins on the end items centre the list when it fits and collapse
+           when it does not. `justify-content: center` would clip the overflowing
+           top edge and put it out of scroll range — auto margins never do. */
+        justify-content: flex-start;
         gap: 28px;
         padding: 32px;
+        padding-top: max(32px, env(safe-area-inset-top));
+        padding-bottom: max(32px, env(safe-area-inset-bottom));
+        /* Body scroll is locked while the menu is open, so this panel owns the
+           only scroll path to its own overflow. Without it, items past the fold
+           (on a landscape phone, or with large font scaling) are unreachable. */
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
         transition: right 0.3s ease;
         border-left: 1px solid var(--border-color);
+    }
+
+    .nav-links > li:first-child {
+        margin-top: auto;
+    }
+
+    .nav-links > li:last-child {
+        margin-bottom: auto;
     }
 
     .nav-links.open {

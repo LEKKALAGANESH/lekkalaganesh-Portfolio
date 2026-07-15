@@ -65,6 +65,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
+    <!-- Marks that JS is available. Scroll-reveal hides content via `html.js`, so
+         without this class the content renders visible — it must never depend on a
+         script to be seen. Inline and first so it lands before paint (no flash). -->
+    <script>document.documentElement.classList.add('js');</script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
