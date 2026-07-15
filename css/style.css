@@ -324,6 +324,11 @@ main,
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Reserve the fixed navbar's strip (plus clearance) so hero content centres
+       in the visible area below it. Without this, tall content or a short
+       viewport centres against the full 100vh and slides under the navbar. */
+    padding-top: calc(var(--nav-height) + 32px);
+    padding-bottom: 40px;
 }
 
 .particle-canvas {
