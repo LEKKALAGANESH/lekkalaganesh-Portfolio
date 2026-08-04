@@ -57,7 +57,10 @@
                Docker, Continuous Integration, GitHub Actions, Vercel, Deployment, Playwright, Vitest,
                Python, Machine Learning, scikit-learn, PyTorch, FastAPI, RAG, Embeddings,
                Vector Search, LLM, Generative AI, ONNX, AI Engineer, Backend Engineering,
-               Data Processing, Model Evaluation, Bangalore, Bengaluru, India}
+               Data Processing, Model Evaluation, Data Labeling, Data Annotation,
+               AI Training Data, Human Annotation, Rubric Design, LLM Evaluation,
+               Prompt Engineering, Adversarial Testing, Quality Assurance,
+               Bangalore, Bengaluru, India}
 }
 
 % Custom commands
@@ -133,6 +136,9 @@
       {Freelance Full-Stack \& AI Engineer}{Remote}
       {Self-Employed}{Jan 2025 -- Present}
       \resumeItemListStart
+        \resumeItem{\textbf{AI Training Data \& Annotation:} Author scoring \textbf{rubrics} and
+        \textbf{hand-label model outputs}, \textbf{blind-scored} against anchored criteria before
+        automated judging; \textbf{adversarial probes} for sycophancy, verbosity, position bias.}
         \resumeItem{\textbf{LLM Integration:} Engineered \textbf{multi-provider AI fallback} (GPT-4o
         $\rightarrow$ Gemini $\rightarrow$ OpenRouter) with graceful degradation, powering real-time
         \textbf{SSE} voice streaming (\href{https://premium-ai-voice-assistant.vercel.app/}{\underline{VoxAI}})
@@ -186,15 +192,15 @@
           {\textbf{Lite-Vision --- Real-Time Face Analysis} $|$ \emph{FastAPI, OpenCV DNN, ONNX, Next.js}}{\href{https://github.com/LEKKALAGANESH/AGE-AND-GENDER-DETECTION}{\underline{GitHub}}}
           \resumeItemListStart
             \resumeItem{Serves \textbf{four pretrained ONNX models} (SCRFD, InsightFace gender-age, FairFace,
-            FER+) via an \textbf{OpenCV DNN} pipeline with \textbf{multi-model fusion}, CLAHE preprocessing,
-            and frame caching; rate-limited \textbf{FastAPI}, live webcam streaming, \textbf{73 tests}.}
+            FER+) via an \textbf{OpenCV DNN} pipeline with \textbf{multi-model fusion} and frame caching;
+            rate-limited \textbf{FastAPI}, live webcam streaming, \textbf{73 tests}.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{AuraGen --- AI Image Generation Platform} $|$ \emph{PyTorch, HF Diffusers, FastAPI, CUDA}}{\href{https://github.com/LEKKALAGANESH/Image-Video-Generation}{\underline{GitHub}}}
+          {\textbf{LLM-as-Judge Evaluation Pipeline} $|$ \emph{Python, Rubric Design, Human Annotation, pytest}}{\href{https://github.com/LEKKALAGANESH/llm-as-judge-pipeline}{\underline{GitHub}}}
           \resumeItemListStart
-            \resumeItem{\textbf{Async job queue} with \textbf{WebSocket} progress streaming and OOM handling;
-            \textbf{hybrid cloud-burst routing} offloads jobs over the local \textbf{VRAM budget} to HuggingFace
-            with local fallback; \textbf{NF4 quantization} path (bitsandbytes, attention slicing, VAE tiling).}
+            \resumeItem{\textbf{Hand-labeled 105 human judgments} (15 outputs, 6 criteria + holistic) against a
+            self-authored \textbf{rubric} with 1/3/5 anchors, scored before any judge ran; \textbf{60 eval
+            items} incl. \textbf{27 adversarial probes} in 5 categories.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
