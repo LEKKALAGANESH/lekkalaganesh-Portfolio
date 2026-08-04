@@ -9,9 +9,12 @@
         'Accessible Web Engineer'
     ];
 
+    // The span ships with roles[0] already rendered so the title survives no-JS and
+    // crawlers. Resume from that text instead of retyping it over itself, which would
+    // flash the title away 1.4s after paint.
     let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+    let charIndex = el.textContent.trim().length;
+    let isDeleting = charIndex > 0;
 
     const TYPING_SPEED = 80;
     const DELETING_SPEED = 40;

@@ -4,32 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lekkala Ganesh | AI Application Engineer & Full-Stack Engineer</title>
+    <title>Lekkala Ganesh | AI Application Engineer & Full-Stack Web Developer</title>
     <meta name="description"
-        content="Portfolio of Lekkala Ganesh — AI application engineer building Python and TypeScript systems that put machine learning into production: RAG retrieval, scikit-learn matching, ONNX model serving, and multi-provider LLM orchestration. Based in Bangalore.">
+        content="Portfolio of Lekkala Ganesh — full-stack and AI application engineer shipping end-to-end web applications: React clients, Node.js/Express and FastAPI services, PostgreSQL and MongoDB schema design, deployed on Vercel — plus the machine learning inside them (RAG retrieval, ONNX model serving, multi-provider LLM orchestration). Based in Bangalore.">
     <meta name="author" content="Lekkala Ganesh">
+    <!-- Spelling variants (NodeJS/ReactJS/Fullstack) live here, not in visible copy: ATS and
+         job-board scrapers read this tag and humans don't, so carrying both spellings costs
+         nothing here but reads as keyword-gaming anywhere on the page. -->
     <meta name="keywords"
-        content="AI Engineer, Machine Learning, Python, scikit-learn, PyTorch, FastAPI, RAG, Embeddings, Vector Search, LLM, Generative AI, SQL, PostgreSQL, Full-Stack Engineer, Portfolio">
+        content="Full Stack Developer, Full Stack Web Developer, Fullstack, MERN, MERN Stack, MongoDB, Express.js, React, ReactJS, Node.js, NodeJS, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Responsive Design, End-to-End Web Development, End to End Web Development, Web Application Development, REST APIs, Authentication, JWT, Database Design, Schema Design, SQL, PostgreSQL, Docker, Continuous Integration, GitHub Actions, Vercel, Deployment, AI Engineer, Machine Learning, Python, scikit-learn, PyTorch, FastAPI, RAG, Embeddings, Vector Search, LLM, Generative AI, ONNX, Bangalore, Bengaluru, Portfolio">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
+    <link rel="canonical" href="https://lekkalaganesh.vercel.app">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Lekkala Ganesh | AI Application Engineer & Full-Stack Engineer">
+    <meta property="og:title" content="Lekkala Ganesh | AI Application Engineer & Full-Stack Web Developer">
     <meta property="og:description"
-        content="AI application engineer building Python and TypeScript systems that put machine learning into production — RAG retrieval, ONNX model serving, and multi-provider LLM orchestration. Based in Bangalore.">
+        content="Full-stack and AI application engineer shipping end-to-end web applications — React clients, Node.js/Express and FastAPI services, PostgreSQL and MongoDB schema design, deployed on Vercel — plus the machine learning inside them. Based in Bangalore.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lekkalaganesh.vercel.app">
     <meta property="og:image" content="https://lekkalaganesh.vercel.app/assets/ganesh.jpeg">
-    <meta property="og:image:alt" content="Lekkala Ganesh — AI Application Engineer & Full-Stack Engineer">
+    <meta property="og:image:alt" content="Lekkala Ganesh — AI Application Engineer & Full-Stack Web Developer">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lekkala Ganesh | AI Application Engineer & Full-Stack Engineer">
+    <meta name="twitter:title" content="Lekkala Ganesh | AI Application Engineer & Full-Stack Web Developer">
     <meta name="twitter:description"
-        content="AI application engineer building Python and TypeScript systems that put machine learning into production — RAG retrieval, ONNX model serving, and multi-provider LLM orchestration.">
+        content="Full-stack and AI application engineer shipping end-to-end web applications — React clients, Node.js/Express and FastAPI services, PostgreSQL and MongoDB schema design — plus the machine learning inside them.">
     <meta name="twitter:image" content="https://lekkalaganesh.vercel.app/assets/ganesh.jpeg">
-    <meta name="twitter:image:alt" content="Lekkala Ganesh — AI Application Engineer & Full-Stack Engineer">
+    <meta name="twitter:image:alt" content="Lekkala Ganesh — AI Application Engineer & Full-Stack Web Developer">
 
     <!-- JSON-LD Person Schema -->
     <script type="application/ld+json">
@@ -39,7 +44,8 @@
         "name": "Lekkala Ganesh",
         "url": "https://lekkalaganesh.vercel.app",
         "email": "lekkalaganesh14@gmail.com",
-        "jobTitle": "AI Application Engineer & Full-Stack Engineer",
+        "jobTitle": ["AI Application Engineer", "Full-Stack Web Developer", "Full Stack Developer"],
+        "description": "Full-stack and AI application engineer shipping end-to-end web applications — React clients, Node.js/Express and FastAPI services, PostgreSQL and MongoDB schema design, deployed on Vercel — plus the machine learning inside them: embedding-based retrieval (RAG), scikit-learn text matching, ONNX model serving, and multi-provider LLM orchestration.",
         "sameAs": [
             "https://github.com/LEKKALAGANESH",
             "https://linkedin.com/in/lekkala-ganesh"
@@ -54,7 +60,7 @@
             "addressLocality": "Bangalore",
             "addressCountry": "India"
         },
-        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Python", "scikit-learn", "PyTorch", "Retrieval-Augmented Generation", "Vector Search", "Large Language Models", "ONNX Model Serving", "FastAPI", "SQL", "PostgreSQL", "Full-Stack Development", "React", "Next.js"]
+        "knowsAbout": ["End-to-End Web Development", "Full-Stack Development", "Web Application Development", "MERN Stack", "MongoDB", "Express.js", "React", "Node.js", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive Web Design", "REST API Design", "Authentication and Authorization", "JWT", "Database Design", "SQL", "PostgreSQL", "Docker", "Continuous Integration", "Vercel Deployment", "Artificial Intelligence", "Machine Learning", "Python", "scikit-learn", "PyTorch", "Retrieval-Augmented Generation", "Vector Search", "Large Language Models", "ONNX Model Serving", "FastAPI"]
     }
     </script>
 
@@ -109,10 +115,13 @@
                 <p class="hero-greeting">Hello, I'm</p>
                 <h1 class="hero-name">Lekkala Ganesh</h1>
                 <p class="hero-title">
-                    <span id="typewriter" class="typewriter-text"></span>
+                    <!-- Seeded with roles[0] from js/typewriter.js so the role is in the served
+                         HTML: an empty span here means crawlers and no-JS visitors see no title
+                         at all. The script picks up from this text rather than retyping it. -->
+                    <span id="typewriter" class="typewriter-text">Full-Stack Web Developer</span>
                     <span class="typewriter-cursor">|</span>
                 </p>
-                <p class="hero-summary">AI application engineer building Python and TypeScript systems that put machine learning into production &mdash; RAG retrieval, ONNX model serving, and multi-provider LLM orchestration, wrapped in FastAPI services and React frontends. Shipped with tests and CI.
+                <p class="hero-summary">Full-stack and AI application engineer shipping end-to-end web applications in TypeScript and Python &mdash; React clients, Node.js/Express and FastAPI services, PostgreSQL and MongoDB schema design, deployed on Vercel &mdash; plus the machine learning inside them: RAG retrieval, ONNX model serving, and multi-provider LLM orchestration. Shipped with tests and CI.
                 </p>
                 <p class="hero-context">B.Tech CS&amp;E &middot; 320+ automated tests across public repos &middot; Bangalore, India</p>
                 <div class="hero-ctas">
@@ -156,17 +165,20 @@
                             search, <strong>scikit-learn</strong> text matching, serving <strong>ONNX</strong> models
                             through real inference pipelines, and orchestrating LLMs across providers with graceful
                             fallback when one goes down.</p>
-                        <p>My background is <strong>full-stack</strong>, and I think that's the point &mdash; a model is
-                            only useful once it's wrapped in a <strong>FastAPI</strong> service, backed by a
-                            <strong>PostgreSQL</strong> schema with real constraints and Row-Level Security, and
-                            reachable from an interface someone can actually use. I started in ML during an internship
-                            building regression and classification models in Python, and I've been pulling that thread
-                            through everything I've built since.</p>
+                        <p>My background is <strong>full-stack</strong>, and I think that's the point &mdash; I ship
+                            <strong>end-to-end web applications</strong>, from a <strong>PostgreSQL</strong> or
+                            <strong>MongoDB</strong> schema with real constraints and Row-Level Security, through
+                            <strong>REST APIs</strong> on <strong>Node.js/Express</strong> and <strong>FastAPI</strong>,
+                            out to <strong>React</strong> and <strong>Next.js</strong> clients
+                            <strong>deployed on Vercel</strong>. A model is only useful once it's reachable from an
+                            interface someone can actually use. I started in ML during an internship building
+                            regression and classification models in Python, and I've been pulling that thread through
+                            everything I've built since.</p>
                         <p>I care about <strong>evidence over adjectives</strong>. My public repos carry
                             <strong>320+ automated tests</strong> and CI pipelines because "it works on my machine"
                             isn't a claim &mdash; it's a hypothesis. I hold a <strong>B.Tech in Computer Science &amp;
-                            Engineering</strong> from Parul University and I'm seeking
-                            <strong>AI/ML engineering roles</strong>.
+                            Engineering</strong> from Parul University and I'm open to
+                            <strong>full-stack web development</strong> and <strong>AI/ML engineering</strong> roles.
                         </p>
                         <div class="about-highlights">
                             <div class="highlight-item">
@@ -182,8 +194,8 @@
                                 <span class="highlight-label">Embeddings &amp; Vector Search</span>
                             </div>
                             <div class="highlight-item">
-                                <span class="highlight-number">ONNX</span>
-                                <span class="highlight-label">Model Serving Pipelines</span>
+                                <span class="highlight-number">MERN</span>
+                                <span class="highlight-label">End-to-End Web Applications</span>
                             </div>
                         </div>
                     </div>
@@ -278,6 +290,7 @@
                         </div>
                         <h3 class="skill-title">Backend &amp; APIs</h3>
                         <div class="skill-tags">
+                            <span class="tag">MERN Stack</span>
                             <span class="tag">FastAPI</span>
                             <span class="tag">Flask</span>
                             <span class="tag">Node.js</span>
@@ -322,10 +335,13 @@
                         </div>
                         <h3 class="skill-title">Frontend, Testing &amp; DevOps</h3>
                         <div class="skill-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
                             <span class="tag">React</span>
                             <span class="tag">Next.js</span>
                             <span class="tag">TypeScript</span>
                             <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Responsive Design</span>
                             <span class="tag">pytest</span>
                             <span class="tag">Vitest</span>
                             <span class="tag">Playwright</span>
@@ -366,10 +382,10 @@
                                 <li><strong>PostgreSQL Schema Design:</strong> Designed relational schemas with foreign
                                     keys, CHECK constraints, composite indexes, and triggers; secured per-user data
                                     with Row-Level Security policies and JWT auth on Supabase.</li>
-                                <li><strong>Full-Stack Delivery:</strong> Shipped client web apps end to end &mdash;
-                                    REST API design and component-driven React/Next.js front-ends &mdash; meeting
-                                    WCAG 2.1 AA via custom a11y hooks and automated Playwright testing across Chrome,
-                                    Firefox, Safari, and Edge.</li>
+                                <li><strong>End-to-End Full-Stack Delivery:</strong> Shipped client web apps
+                                    end-to-end &mdash; REST API design and component-driven React/Next.js front-ends,
+                                    deployed on Vercel &mdash; meeting WCAG 2.1 AA via custom a11y hooks and automated
+                                    Playwright cross-browser testing across Chrome, Firefox, Safari, and Edge.</li>
                             </ul>
                             <div class="timeline-tags">
                                 <span class="tag">Next.js</span>
@@ -397,12 +413,14 @@
                                 <span class="timeline-date">Dec 2024 &mdash; Apr 2025</span>
                             </div>
                             <ul class="timeline-bullets">
-                                <li><strong>Full Stack Delivery:</strong> Delivered 6 full-stack projects across 3
-                                    tiers (basic to advanced), including a real-time Weather Forecast app with API
-                                    integration, a URL Shortener API (Node.js, Express, MongoDB), and a Food Delivery
-                                    platform with authentication, geolocation, and payment flow.</li>
+                                <li><strong>End-to-End MERN Stack Delivery:</strong> Delivered 6 full-stack projects
+                                    across 3 tiers (basic to advanced) on the MERN stack (MongoDB, Express.js, React,
+                                    Node.js), including a real-time Weather Forecast app with API integration, a URL
+                                    Shortener REST API (Node.js, Express.js, MongoDB), and a Food Delivery platform
+                                    with authentication, geolocation, and payment flow.</li>
                             </ul>
                             <div class="timeline-tags">
+                                <span class="tag">MERN Stack</span>
                                 <span class="tag">React</span>
                                 <span class="tag">Node.js</span>
                                 <span class="tag">Express.js</span>
@@ -592,12 +610,15 @@
 
                     <div class="project-card small glass animate-on-scroll">
                         <h4 class="project-title-sm">2A Construction LLC</h4>
-                        <p class="project-desc-sm">Full-stack contractor platform with secure financial data handling
-                            and RLS-protected backends.</p>
+                        <p class="project-desc-sm">End-to-end contractor platform built and shipped for a client
+                            &mdash; secure financial data handling on RLS-protected backends, React/Next.js front-end,
+                            live in production on Vercel.</p>
                         <div class="project-tags">
                             <span class="tag">Next.js</span>
+                            <span class="tag">React</span>
                             <span class="tag">Supabase</span>
                             <span class="tag">RLS</span>
+                            <span class="tag">Vercel</span>
                         </div>
                         <a href="https://2-a-construction-llc.vercel.app/" target="_blank" rel="noopener noreferrer"
                             class="project-link-sm">View Project &rarr;</a>
@@ -659,8 +680,8 @@
 
                     <div class="project-card small glass animate-on-scroll">
                         <h4 class="project-title-sm">Finance Tracker</h4>
-                        <p class="project-desc-sm">Secure personal finance platform with JWT auth and RLS-protected
-                            PostgreSQL backend.</p>
+                        <p class="project-desc-sm">End-to-end personal finance app &mdash; React client on a
+                            JWT-authenticated, RLS-protected PostgreSQL backend with a constraint-backed schema.</p>
                         <div class="project-tags">
                             <span class="tag">Supabase</span>
                             <span class="tag">JWT</span>
@@ -688,8 +709,9 @@
 
                     <div class="project-card small glass animate-on-scroll">
                         <h4 class="project-title-sm">Store Ratings Platform</h4>
-                        <p class="project-desc-sm">Role-based ratings system with multi-table JOIN and GROUP BY
-                            reporting queries, CHECK constraints, and parameterized SQL across three user roles.</p>
+                        <p class="project-desc-sm">End-to-end role-based ratings app &mdash; React front-end on a
+                            Node.js backend, with multi-table JOIN and GROUP BY reporting queries, CHECK constraints,
+                            and parameterized SQL across three user roles.</p>
                         <div class="project-tags">
                             <span class="tag">SQL</span>
                             <span class="tag">SQLite</span>
