@@ -1,0 +1,12 @@
+# Claude Code session state. .claude/worktrees/ holds full checkouts of this
+# repo, so without this line a `git add -A` commits a copy of the repo into itself.
+.claude/
+
+# Playwright MCP scratch output (screenshots, page snapshots)
+.playwright-mcp/
+
+# LaTeX build artifacts from compiling Ganesh_Resume_Optimized.tex
+*.aux
+*.log
+*.out
+*.synctex.gz
