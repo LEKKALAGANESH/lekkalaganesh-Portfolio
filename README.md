@@ -56,7 +56,7 @@ portfolio/
 
 1. **Navigation** — Fixed header with blur-on-scroll, mobile hamburger menu
 2. **Hero** — Animated particles, typewriter roles, CTA buttons, social links
-3. **About** — Professional summary and key facts (320+ automated tests across public repos, Python/TypeScript/SQL, RAG, ONNX model serving)
+3. **About** — Professional summary and key facts (500+ automated tests across public repos, Python/TypeScript/SQL, RAG, LangGraph agents, conversational AI)
 4. **Skills** — 6 glass-morphism cards: Machine Learning, AI & Deep Learning, Generative AI & RAG, Backend & APIs, Data & Storage, Frontend/Testing/DevOps
 5. **Experience** — Vertical timeline with gradient line and pulse indicator for current role
 6. **Projects** — 4 featured cards + 9 smaller project cards with live/GitHub links
