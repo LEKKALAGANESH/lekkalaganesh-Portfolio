@@ -4,9 +4,10 @@
     if (!el) return;
 
     const roles = [
-        'Full-Stack Web Developer',
-        'AI Application Developer',
-        'Accessible Web Engineer'
+        'AI/ML Engineer',
+        'LLM Application Developer',
+        'Conversational AI Engineer',
+        'Data Science Engineer'
     ];
 
     // The span ships with roles[0] already rendered so the title survives no-JS and
