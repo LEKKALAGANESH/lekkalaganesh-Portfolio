@@ -455,6 +455,25 @@
                                     request-scoped correlation-ID logging, behind React/Next.js front-ends deployed on
                                     Vercel &mdash; meeting WCAG 2.1 AA with automated Playwright cross-browser testing.</li>
                             </ul>
+                            <h4 class="timeline-subgroup">Client Websites &amp; Freelance Products</h4>
+                            <ul class="timeline-bullets">
+                                <li><strong>U.S. Client Websites:</strong> Designed and developed 2 responsive,
+                                    accessible business websites end-to-end (UI/UX, semantic HTML5/CSS3, CSS
+                                    Grid/Flexbox, mobile-first, cross-browser layout) optimized for Core Web Vitals
+                                    and on-page SEO, for U.S.-based construction clients &mdash; Ultracore
+                                    Construction and McAllister Builders.</li>
+                                <li><strong>Client Communication:</strong> Ran requirement-gathering, revision, and
+                                    sign-off calls directly with U.S.-based clients across time zones, translating
+                                    verbal feedback into iterative design/copy changes with same-day turnaround.</li>
+                                <li><strong>Marketplace Platform (Ongoing):</strong> Building Aglaowner, a Next.js
+                                    self-serve small-business marketplace &mdash; mobile OTP and DigiLocker identity
+                                    verification, WhatsApp-based contact unlock, listing search/filter across 800+
+                                    live listings.</li>
+                                <li><strong>Fintech Education Platform (Completed):</strong> Built IQCommune, a
+                                    Next.js site for a financial-literacy training platform with interactive
+                                    budgeting, retirement, and portfolio-valuation calculators and a waitlist signup
+                                    flow.</li>
+                            </ul>
                             <div class="timeline-tags">
                                 <span class="tag">Conversational AI</span>
                                 <span class="tag">Voicebot</span>
@@ -469,6 +488,38 @@
                                 <span class="tag">Gemini</span>
                                 <span class="tag">SSE</span>
                                 <span class="tag">Structured Logging</span>
+                                <span class="tag">Responsive Design</span>
+                                <span class="tag">Accessibility</span>
+                                <span class="tag">Core Web Vitals</span>
+                                <span class="tag">Client Communication</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Junior Software Developer</h3>
+                                    <p class="timeline-company">AlterSquare (OrderStack Partnership) &middot;
+                                        Mumbai, India</p>
+                                </div>
+                                <span class="timeline-date">Dec 2025 &mdash; Mar 2026</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li><strong>Client Website Delivery:</strong> Designed and developed the responsive,
+                                    accessible client website 2A Construction end-to-end (UI/UX, semantic
+                                    HTML5/CSS3, CSS Grid/Flexbox, mobile-first, cross-browser layout) for a
+                                    U.S.-based client, optimized for Core Web Vitals and on-page SEO.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Responsive Design</span>
+                                <span class="tag">Accessibility</span>
+                                <span class="tag">HTML5/CSS3</span>
+                                <span class="tag">CSS Grid/Flexbox</span>
+                                <span class="tag">Core Web Vitals</span>
+                                <span class="tag">On-Page SEO</span>
                             </div>
                         </div>
                     </div>
@@ -1371,8 +1422,8 @@
                             </a>
                         </div>
                     </div>
-                    <form class="contact-form glass animate-on-scroll" action="https://formspree.io/f/xreydbva"
-                        method="POST">
+                    <form id="contactForm" class="contact-form glass animate-on-scroll"
+                        action="https://formspree.io/f/xreydbva" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required autocomplete="name">
@@ -1390,6 +1441,17 @@
                 </div>
             </div>
         </section>
+
+        <!-- ========== CONTACT FORM RESULT MODAL ========== -->
+        <div id="contactModal" class="modal-overlay" hidden>
+            <div class="modal-box glass" role="alertdialog" aria-modal="true" aria-labelledby="contactModalTitle"
+                aria-describedby="contactModalMessage">
+                <button type="button" class="modal-close" aria-label="Close">&times;</button>
+                <div id="contactModalIcon" class="modal-icon"></div>
+                <h3 id="contactModalTitle" class="modal-title"></h3>
+                <p id="contactModalMessage" class="modal-message"></p>
+            </div>
+        </div>
     </main>
 
     <!-- ========== FOOTER ========== -->

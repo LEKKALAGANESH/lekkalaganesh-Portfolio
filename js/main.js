@@ -99,6 +99,62 @@ window.addEventListener('load', () => {
     }, 3000);
 });
 
+// ========== CONTACT FORM SUBMIT + RESULT MODAL ==========
+const contactForm = document.getElementById('contactForm');
+const contactModal = document.getElementById('contactModal');
+
+if (contactForm && contactModal) {
+    const modalBox = contactModal.querySelector('.modal-box');
+    const modalIcon = document.getElementById('contactModalIcon');
+    const modalTitle = document.getElementById('contactModalTitle');
+    const modalMessage = document.getElementById('contactModalMessage');
+    const modalClose = contactModal.querySelector('.modal-close');
+    const submitBtn = contactForm.querySelector('.btn-submit');
+
+    function showModal(success) {
+        modalIcon.className = `modal-icon ${success ? 'success' : 'error'}`;
+        modalIcon.textContent = success ? '✓' : '✕';
+        modalTitle.textContent = success ? 'Message Sent' : 'Something Went Wrong';
+        modalMessage.textContent = success
+            ? "Thanks for reaching out — I'll get back to you soon."
+            : "Your message couldn't be sent. Please try again or email me directly.";
+        contactModal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        modalClose.focus();
+    }
+
+    function closeModal() {
+        contactModal.hidden = true;
+        document.body.style.overflow = '';
+        contactForm.reset();
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { Accept: 'application/json' }
+            });
+            showModal(response.ok);
+        } catch {
+            showModal(false);
+        } finally {
+            submitBtn.disabled = false;
+        }
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    contactModal.addEventListener('click', (e) => {
+        if (!modalBox.contains(e.target)) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !contactModal.hidden) closeModal();
+    });
+}
+
 // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
