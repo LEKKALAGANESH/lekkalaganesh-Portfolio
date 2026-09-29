@@ -218,6 +218,42 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
+          {\textbf{Lenny Growth Assistant} $|$ \emph{Python, FastAPI, pgvector, BM25, Next.js, Docker}}{\href{https://github.com/LEKKALAGANESH/lenny-growth-assistant}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Grounded \textbf{RAG} over podcast transcripts: \textbf{hybrid retrieval}
+            (pgvector \textbf{HNSW} + \textbf{BM25}, \textbf{Reciprocal Rank Fusion}) with
+            episode/timestamp \textbf{citations} and out-of-scope refusal; \textbf{multi-LLM fallback}
+            (OpenAI $\rightarrow$ Groq $\rightarrow$ Gemini, Ollama, Claude) and sandboxed artifacts.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{AI Interview Prep Kit} $|$ \emph{TypeScript, Node.js, LLM APIs, CI}}{\href{https://github.com/LEKKALAGANESH/ai-interview-prep-kit}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Turns a job description and company site into a \textbf{requirement-traced}
+            interview kit; \textbf{structured JD extraction}, a \textbf{deterministic coverage engine}
+            with bounded gap-filling pass, N-day study plan, flashcards, and 5 \textbf{LLM providers}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Agentic AI RAG Chatbot} $|$ \emph{Python, LangGraph, Pinecone, OpenAI, FastAPI}}{\href{https://github.com/LEKKALAGANESH/agentic-ai-rag-chatbot}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Document-grounded chatbot: PDF chunking $\rightarrow$ \textbf{OpenAI embeddings}
+            $\rightarrow$ \textbf{Pinecone} $\rightarrow$ \textbf{LangGraph} relevance gate that
+            \textbf{refuses below a retrieval-confidence threshold}, served via \textbf{FastAPI}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Zoho One Employee Portal} $|$ \emph{Next.js 16, Express, TypeScript, Supabase Postgres}}{\href{https://github.com/LEKKALAGANESH/zoho-one-employee-portal}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Portal with its own \textbf{JWT} (httpOnly, revocable sessions) and \textbf{RBAC};
+            employees reach \textbf{Zoho CRM/Desk/Books/People} through one server-held service account,
+            with \textbf{audit logs} and \textbf{RLS}-locked tables.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Hotel Bar Inventory Intelligence} $|$ \emph{Python, pandas, statsmodels, scikit-learn}}{\href{https://github.com/LEKKALAGANESH/hotel-bar-inventory-intelligence}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{Demand forecasting} (Holt-Winters, RandomForest) and dynamic
+            \textbf{par levels} with safety stock across 96 bar-brand series; backtest cut
+            \textbf{stockout days 73--87\%} and lifted \textbf{fill rate 28\% $\rightarrow$ 94\%}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
           {\textbf{Cost-Efficient RAG Service} $|$ \emph{Python, FastAPI, LanceDB, sentence-transformers, litellm}}{\href{https://github.com/LEKKALAGANESH/cost-efficient-rag}{\underline{GitHub}}}
           \resumeItemListStart
             \resumeItem{\textbf{Chunking} $\rightarrow$ \textbf{embeddings} (all-MiniLM-L6-v2)
