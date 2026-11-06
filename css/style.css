@@ -816,6 +816,10 @@ main,
     align-items: center;
 }
 
+.education-card + .education-card {
+    margin-top: 24px;
+}
+
 .education-icon {
     color: var(--accent-cyan);
     flex-shrink: 0;
